@@ -1,4 +1,4 @@
-package com.conversorvideo.conversorvideo;
+package com.conversorvideo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

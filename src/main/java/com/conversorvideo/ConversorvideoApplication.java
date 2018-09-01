@@ -1,4 +1,4 @@
-package com.conversorvideo.conversorvideo;
+package com.conversorvideo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
