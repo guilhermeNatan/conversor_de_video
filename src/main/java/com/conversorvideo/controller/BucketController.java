@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
  * Controller com endpoints de gestão de arquivos no amazon s3 .
  */
 @RestController
-@RequestMapping("/storage/")
+@RequestMapping("/storage")
 public class BucketController {
 
     private AmazonClient amazonClient;
