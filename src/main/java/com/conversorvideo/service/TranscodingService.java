@@ -22,6 +22,11 @@ public class TranscodingService {
         client = new OkHttpClient();
     }
 
+    /**
+     * Realiza comunicação com a Zenconder-API para realizar a conversão de um arquivo
+     * @param transcodingForm {@link TranscodingForm}
+     * @return Json contendo de saída do vídeo.
+     */
     public String transcoding(TranscodingForm transcodingForm) {
         try {
             String json = getJsonZencodePostRequest(transcodingForm);
@@ -38,6 +43,12 @@ public class TranscodingService {
         }
     }
 
+    /**
+     *  Cria um objeto Json com as configurações que serão utilizadas pela api Zencoder
+     * para realizar a conversão do arquivo de entrada
+     * @param transcodingForm {@link TranscodingForm};
+     * @return reprsentação do Json como uma string.
+     */
     private String getJsonZencodePostRequest(TranscodingForm transcodingForm) {
         JSONObject transcodingBody = new JSONObject();
         transcodingBody.put("input", transcodingForm.getInput());

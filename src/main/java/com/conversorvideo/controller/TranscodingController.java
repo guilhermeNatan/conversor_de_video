@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * https://s3.sa-east-1.amazonaws.com/desafiosambatech/1535921522513-tela_celular.mov
+ * Controller para realizar a conversão dos arquivos submetidos.
  */
 @RestController
 @RequestMapping("/transcoding")
