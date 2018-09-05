@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Controller para realizar a conversão dos arquivos submetidos.
  */
 @RestController
-@RequestMapping("/transcoding")
+@RequestMapping("/conversor/transcoding")
 public class TranscodingController {
     @Autowired
     private  TranscodingService transcodingService;

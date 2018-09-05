@@ -1,9 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { urlBase } from '../constants/Constantes';
 import { Rotulo } from './Rotulo';
 import { SimpleReactFileUpload } from './SimpleReactFileUpload';
-
+import {BASE_URL} from "../constants/Constantes";
 
 const styles = theme => ({
   container: {
@@ -24,7 +23,7 @@ const FileUpload = props => (
       maxFilesize={1024}
       disableAddActions={props.readOnly}
       hideDeleteActions={props.readOnly}
-      uploadUrl="http://localhost:9441/storage/uploadFile"
+      uploadUrl={`${BASE_URL}/storage/uploadFile`}
       maxFiles={props.maxFiles}
       existingFiles={props.existingFiles}
       required={props.required}

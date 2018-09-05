@@ -82,7 +82,7 @@ public class AmazonClient {
      * Faz upload de um arquivo para o amazon s3 .
      *
      * @param multipartFile {@link MultipartFile}
-     * @return url de acesso ao arquivo .
+     * @return nome do arquivo salvo no bucket .
      */
     public String uploadFile(MultipartFile multipartFile) {
         String fileUrl = "";
@@ -95,7 +95,8 @@ public class AmazonClient {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return fileUrl;
+        String paramsUrl[] = fileUrl.split("/");
+        return paramsUrl[paramsUrl.length-1];
     }
 
 

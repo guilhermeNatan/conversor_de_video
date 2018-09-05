@@ -14,6 +14,7 @@ public class TranscodingService {
     private OkHttpClient client;
     private static final MediaType JSON
             = MediaType.parse("application/json");
+    private static final String BASE_URL_BUCKET = "https://s3.sa-east-1.amazonaws.com/desafiosambatech/";
 
     @Value("${zencoderApiKey}")
     private String apiKey;
@@ -51,9 +52,10 @@ public class TranscodingService {
      */
     private String getJsonZencodePostRequest(TranscodingForm transcodingForm) {
         JSONObject transcodingBody = new JSONObject();
-        transcodingBody.put("input", transcodingForm.getInput());
+
+        transcodingBody.put("input", BASE_URL_BUCKET + transcodingForm.getFilename());
         JSONObject outputItem =  new JSONObject();
-        outputItem.put("url", "s3://desafiosambatech/" + transcodingForm.getFilename());
+        outputItem.put("url", "s3://desafiosambatech/" + transcodingForm.getFileWithOutputExtension());
         outputItem.put("credentials", "amazon_s3");
         outputItem.put("public", true);
 
