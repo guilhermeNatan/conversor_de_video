@@ -6,8 +6,8 @@ não compatível com padrões da web, para um formato que seja compatível com o
 ## Tecnologias utilizadas
 
  - Frontend 
-  * React js: Framework para construção da tela 
-  * ES6 
+    * React js: Framework para construção da tela 
+    * ES6 
  - Backend 
     * Spring boot: Framework para base para estruturação de todo backend 
     https://spring.io/projects/spring-boot
