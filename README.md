@@ -1,4 +1,4 @@
-# Conversor de video (Desafio para o processo de seleção da Samba Tech)
+# Conversor de video 
 
 Aplicação web que possibilita a conversão de arquivos de video de um formato específico, 
 não compatível com padrões da web, para um formato que seja compatível com os padrão da web.
